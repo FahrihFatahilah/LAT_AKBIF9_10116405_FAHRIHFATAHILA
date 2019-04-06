@@ -12,6 +12,8 @@ public class Activity4 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_4);
+
+
         Intent intent = getIntent();
         //mengambil nilai dari intent
         String message = intent.getStringExtra(Activity3.EXTRA_MESSAGE);
@@ -21,7 +23,8 @@ public class Activity4 extends AppCompatActivity {
         textView.setText(message);
         //menampilkan output nilai dari editext
     }
-    public void keluar(View view){
-
+    public void oke(View view){
+        finish();
+        moveTaskToBack(true);
     }
 }
